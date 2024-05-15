@@ -31,3 +31,10 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Step 4
 
 <h2>Actions and Observations</h2>
+
+<p>If you click back into your resource group, sort by type, you will now see both virtual machines and one virtual network. Next we will connect our virtual machines remotely. </p>
+<p>
+<img src= https://i.imgur.com/dLkMeG9.png
+</p>
+  
+<br />
