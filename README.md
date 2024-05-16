@@ -3,7 +3,7 @@
 </p>
 
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machine 1 and Virtual Machine 2 with Wireshark as well as experiment with Network Security Groups. <br />
+In this tutorial, we observe various network traffic to and from Azure Windows 10 Virtual Machine and Linux (Ubuntu) Virtual Machine using Wireshark and PowerShell. We also experiment with Network Security Groups. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -11,9 +11,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools in PowerShell
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Various Network Protocols (SSH, RDH, DNS, DHCP, ICMP)
 - Wireshark (Protocol Analyzer)
-- PowerShell
 
 <h2>Operating Systems Used </h2>
 
@@ -28,6 +27,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Download and Install Wireshark
 - Observe ICMP Traffic
 - Create a Firewall
+- Observe SSH Traffic fron Linux
 
 <h2>Actions and Observations</h2>
 
@@ -82,8 +82,18 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 <img src= https://i.imgur.com/kFw5Hci.png
 </p>
-<p>Re-enable ICMP traffic for the Network Security Group on your Ubuntu VM by changing your rule to allow traffic again. Back in the Windows 10 VM, observe that the ICMP traffic Ping activity has start working again.
-</p>
+<p>Re-enable ICMP traffic for the Network Security Group on your Ubuntu VM by changing your rule to allow traffic again. Back in the Windows 10 VM, observe that the ICMP traffic Ping activity has start working again.</p>
 <p>
 <img src= https://i.imgur.com/DFX1fhs.png
 </p>
+<p>To observe SSH traffic, back in Wireshark, filter for SSH traffic only. From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine by typing the commands 'ssh labuser@10.0.0.6' and then 'Password' and observe the SSH traffic spam in WireShark. You now have a Linux command line shown as labuser@VM2. You can also observe Linux commands and traffic, ($ id, $ uname -a, $ pwd, etc.).Type exit into the command to log out of SSH and go back into your VM1 Windows 10 machine.</p>
+<p>
+<img src= https://i.imgur.com/drxHim2.png
+</p>
+<p>Back in Wireshark, filter for DHCP traffic. From Windows 10 VM, issue your VM a new IP address from the command line (ipconfig /renew)</p>
+<p>
+<img src= https://i.imgur.com/83X73Os.png
+</p>
+<p>In Wireshark, filter for DNS traffic only. From your Windows 10 VM, within a command line, use nslookup to see what google.com's IP address is.</p>
+<p>
+<img src= https://i.imgur.com/VQa1aQH.png
