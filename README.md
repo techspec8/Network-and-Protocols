@@ -3,7 +3,7 @@
 </p>
 
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Windows 10 Virtual Machine and Linux (Ubuntu) Virtual Machine using Wireshark and PowerShell. We also experiment with Network Security Groups. <br />
+In this tutorial, we observe various network traffic protocols and command prompts in an Azure Windows 10 Virtual Machine, and a Linux (Ubuntu) Virtual Machine using Wireshark and PowerShell. We also experiment with creating a firewall in Network Security Groups. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -11,7 +11,7 @@ In this tutorial, we observe various network traffic to and from Azure Windows 1
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools in PowerShell
-- Various Network Protocols (SSH, RDH, DNS, DHCP, ICMP)
+- Various Network Protocols (SSH, RDP, DNS, DHCP, ICMP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
@@ -90,10 +90,15 @@ In this tutorial, we observe various network traffic to and from Azure Windows 1
 <p>
 <img src= https://i.imgur.com/drxHim2.png
 </p>
-<p>Back in Wireshark, filter for DHCP traffic. From Windows 10 VM, issue your VM a new IP address from the command line (ipconfig /renew)</p>
+<p>Back in Wireshark, filter for DHCP traffic. From Windows 10 VM, issue your VM a new IP address from the command line (ipconfig /renew).</p>
 <p>
 <img src= https://i.imgur.com/83X73Os.png
 </p>
-<p>In Wireshark, filter for DNS traffic only. From your Windows 10 VM, within a command line, use nslookup to see what google.com's IP address is.</p>
+<p>In Wireshark, filter for DNS traffic only. From Windows 10 VM, within a command line, use nslookup to see what google.com's IP address is.</p>
 <p>
 <img src= https://i.imgur.com/VQa1aQH.png
+<p/>
+<p>Filter for RDP Traffic only using tcp.port == 3389 in Wireshark. Observe the immediate non-stop spam of traffic because the RDP (protocol) is showing a constant live stream from one computer to another becuase we have an active RDP Port 3389 session from our host, Windows VM1.<p/>
+<p>
+<img src= https://i.imgur.com/b7zqS5q.png
+</p>
