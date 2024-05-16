@@ -28,6 +28,9 @@ In this tutorial, we observe various network traffic protocols and command promp
 - Observe ICMP Traffic
 - Create a Firewall
 - Observe SSH Traffic fron Linux
+- Observe DHCP Traffic
+- Observe DNS Traffic
+- Observe RDP Traffic
 
 <h2>Actions and Observations</h2>
 
