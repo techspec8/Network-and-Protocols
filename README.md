@@ -25,7 +25,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Copy Windows IP Address from VM1
 - Open Remote Desktop 
 - Download and Install Wireshark
-- Observe Traffic
+- Observe ICMP Traffic
 
 <h2>Actions and Observations</h2>
 
@@ -59,7 +59,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 <img src= https://i.imgur.com/RY6xfOG.png
 </p>
-<p>Type ICMP in the search bar to filter by ICMP traffic. Notice that there is no ICMP traffic, this is because you havn't established a connect to VM2 yet. Next, open a new Remote Destop to establish a connection to VM2. ini order to ping connectivity</p>
+<p>Type ICMP in the search bar to filter by ICMP traffic, and notice that there is no ICMP traffic.</p>
 <p>
 <img src= https://i.imgur.com/t4VZHbp.png
+</p>
+<p>Retrieve the private IP address of the Ubuntu VM. In PowerShell enter ping 10.0.0.6. and observe ping requests and replies within WireShark and PowerShell.</p>
+<p>
+<img src= https://i.imgur.com/ZxQL2St.png
+</p>
+<p>Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM by entering ping 10.0.0.6 -t in a PowerShell command line .</p>
+<p>
+<img src= https://i.imgur.com/RD2sm0W.png
 </p>
