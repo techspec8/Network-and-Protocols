@@ -13,6 +13,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Various Command-Line Tools in PowerShell
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
 - Wireshark (Protocol Analyzer)
+- PowerShell
 
 <h2>Operating Systems Used </h2>
 
@@ -26,6 +27,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Open Remote Desktop 
 - Download and Install Wireshark
 - Observe ICMP Traffic
+- Create a Firewall
 
 <h2>Actions and Observations</h2>
 
@@ -67,7 +69,16 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 <img src= https://i.imgur.com/ZxQL2St.png
 </p>
-<p>Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM by entering ping 10.0.0.6 -t in a PowerShell command line .</p>
+<p>Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM by entering ping 10.0.0.6 -t in a PowerShell command line.</p>
 <p>
 <img src= https://i.imgur.com/RD2sm0W.png
+</p>
+<p>Open the Network Security Group your Ubuntu VM in Azure and disable incoming (inbound) ICMP traffic by creating a new firewall rule.
+</p>
+<p>
+<img src= https://i.imgur.com/toVSvRM.png
+</p>
+<p>Back in the Windows 10 VM, observe that ICMP traffic in WireShark and the command line Ping activity has timed out.</p>
+<p>
+<img src= https://i.imgur.com/kFw5Hci.png
 </p>
