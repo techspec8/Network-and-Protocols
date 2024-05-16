@@ -31,7 +31,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
-<p> In Azure create a resource group with a Windows virtual machine (e.g. VM1), and another virtual machine using the Linux Ubuntu Server (e.g. VM2). Refer to repository 'Compute in Azure' for instructions.</p>
+<p> In Azure create a Resource Group with a Windows 10 Virtual Machine (e.g. VM1), and another Linux Ubuntu Virtual Machine (e.g. VM2). Refer to repository 'Compute in Azure' for instructions.</p>
 <p>
 <img src= https://i.imgur.com/biV3tEk.png
 </p>
@@ -41,7 +41,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src= https://i.imgur.com/mknn4hA.png
 </p>
 <br/>
-<p>Type 'Remote Desktop' in your computer's search bar. Click to open then paste VM1's IP address in 'Computer', enter the 'User name' when the virtual machine was created, click 'Connect'. You'll then be prompted to enter your password. A security screen will open, click 'Yes". Now you're connected to VM1! </p>
+<p>Open 'Remote Desktop' from your search bar. Then, paste your Windows 10 IP address in 'Computer', enter the 'User name', click 'Connect'. You'll then be prompted to enter your password. A security screen will open, click 'Yes" and you're connected.</p>
 <p>
 <img src= https://i.imgur.com/tMBSPA4.png
 </p>
@@ -49,7 +49,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src= https://i.imgur.com/xPmu7mk.png
 </p>
 <br/>
-<p>Use the internet on Remote Desktop to search Wireshark, click 'Windows x64 Installer' to download, then click 'open file' to install. Click 'Next' throughout for a standard installation, add a desktop icon if you prefer, then click 'Finish' to complete the installation.</p>
+<p>Using the internet on your Remote Desktop, search Wireshark, download Windows x64 Installer, then 'open file' to install. Click 'Next' throughout each prompt for a standard installation, add a desktop icon if you prefer, click Finish to complete the installation.</p>
 <p>
 <img src= https://i.imgur.com/y5LGMeO.png
 </p>
@@ -57,7 +57,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src= https://i.imgur.com/wGbavZ9.png
 </p>
 <br/>
-<p>Open Wireshark and click the blue shark fin in the upper left corner. Observe the live traffic that runs in the background, including the source IP which is your VM1 private IP address 10.0.0.6.</p>
+<p>Open Wireshark and click the blue shark fin in the upper left corner. Observe the live traffic that runs in the background.</p>
 <p>
 <img src= https://i.imgur.com/RY6xfOG.png
 </p>
@@ -82,7 +82,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 <img src= https://i.imgur.com/kFw5Hci.png
 </p>
-<p>Re-enable ICMP traffic for the Network Security Group your Ubuntu VM by changing your rule to allow traffic again. Back in the Windows 10 VM, observe that ICMP traffic Ping activity has start working again.
+<p>Re-enable ICMP traffic for the Network Security Group on your Ubuntu VM by changing your rule to allow traffic again. Back in the Windows 10 VM, observe that the ICMP traffic Ping activity has start working again.
 </p>
 <p>
 <img src= https://i.imgur.com/DFX1fhs.png
