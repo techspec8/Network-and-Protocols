@@ -82,3 +82,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 <img src= https://i.imgur.com/kFw5Hci.png
 </p>
+<p>Re-enable ICMP traffic for the Network Security Group your Ubuntu VM by changing your rule to allow traffic again. Back in the Windows 10 VM, observe that ICMP traffic Ping activity has start working again.
+</p>
+<p>
+<img src= https://i.imgur.com/DFX1fhs.png
+</p>
